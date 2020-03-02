@@ -6,7 +6,7 @@
   "scripts": {
     "build": "tsc",
     "watch": "tsc --watch",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node ./test/test.js"
   },
   "repository": {
     "type": "git",
@@ -19,11 +19,17 @@
   ],
   "author": "Artem Afonin <artem.00.afonin@gmail.com>",
   "license": "MIT",
+  "files": [
+    "dist/*.js",
+    "types/*.d.ts"
+  ],
+  "typings": "types/index.d.ts",
   "dependencies": {
     "readline-sync": "^1.4.10"
   },
   "devDependencies": {
-    "typescript": "^3.8.3",
-    "@types/node": "^13.7.7"
+    "@types/node": "^13.7.7",
+    "@types/readline-sync": "^1.4.3",
+    "typescript": "^3.8.3"
   }
 }
