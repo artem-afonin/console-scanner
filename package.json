@@ -1,0 +1,29 @@
+{
+  "name": "console-scanner",
+  "version": "0.0.1",
+  "description": "Simple console reader for Node.js",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/artem-afonin/console-scanner.git"
+  },
+  "keywords": [
+    "console",
+    "reader",
+    "input"
+  ],
+  "author": "Artem Afonin <artem.00.afonin@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  },
+  "devDependencies": {
+    "typescript": "^3.8.3",
+    "@types/node": "^13.7.7"
+  }
+}
