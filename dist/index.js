@@ -5,13 +5,6 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 exports.__esModule = true;
 var readline_sync_1 = __importDefault(require("readline-sync"));
 var inputQueue = [];
-/**
- * Read full line
- *
- * @param {string} promptText question text
- *
- * @return {string}
- */
 function nextLine(promptText) {
     if (promptText === void 0) { promptText = ''; }
     var input;
@@ -26,22 +19,10 @@ function nextLine(promptText) {
     }
 }
 exports.nextLine = nextLine;
-/**
- * Alias for nextLine(promptText)
- *
- * @param {string} promptText question text
- *
- * @return {string}
- */
 function prompt(promptText) {
     return nextLine(promptText);
 }
 exports.prompt = prompt;
-/**
- * Read next word from input line
- *
- * @return {string}
- */
 function next() {
     if (inputQueue.length !== 0) {
         return inputQueue.splice(0, 1)[0];
@@ -54,15 +35,6 @@ function next() {
     return strings[0];
 }
 exports.next = next;
-/**
- * Read next Integer number from input line
- *
- * @param {number} radix number radix
- *
- * @throws {Error} if failed to convert to Integer
- *
- * @return {number}
- */
 function nextInt(radix) {
     if (radix === void 0) { radix = 10; }
     var num = parseInt(next(), radix);
@@ -72,13 +44,6 @@ function nextInt(radix) {
     return num;
 }
 exports.nextInt = nextInt;
-/**
- * Read next Float number from input line
- *
- * @throws {Error} if failed to convert to Float
- *
- * @return {number}
- */
 function nextFloat() {
     var num = parseFloat(next());
     if (isNaN(num)) {
@@ -87,3 +52,10 @@ function nextFloat() {
     return num;
 }
 exports.nextFloat = nextFloat;
+exports["default"] = {
+    nextLine: nextLine,
+    prompt: prompt,
+    next: next,
+    nextInt: nextInt,
+    nextFloat: nextFloat
+};
