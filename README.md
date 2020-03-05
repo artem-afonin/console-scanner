@@ -32,13 +32,19 @@ let word = scanner.next();
 ```
 
 ## History
-
+- 0.0.2 - hotfix import errors
 - 0.0.1 - Added
   - nextLine()
   - prompt()
   - next()
   - nextInt()
   - nextFloat()
+
+
+## Issues and Contributing
+- Your issues are welcome here: `https://github.com/artem-afonin/console-scanner/issues`
+- Contributing for improving the library is welcome on GitHub: `https://github.com/artem-afonin/console-scanner`
+
 
 ## License
 
