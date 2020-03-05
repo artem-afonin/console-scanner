@@ -42,7 +42,7 @@ export function prompt(promptText: string): string {
  * @return {string}
  */
 export function next(): string {
-  if (inputQueue.length !== 0) {
+  if (hasNext()) {
     return inputQueue.splice(0, 1)[0]
   }
   const input = nextLine()
@@ -51,6 +51,16 @@ export function next(): string {
     inputQueue.push(strings[i])
   }
   return strings[0]
+}
+
+
+/**
+ * Check if input queue has next word
+ *
+ * @return {boolean}
+ */
+export function hasNext(): boolean {
+  return inputQueue.length !== 0
 }
 
 
@@ -91,6 +101,7 @@ export default {
   nextLine,
   prompt,
   next,
+  hasNext,
   nextInt,
   nextFloat
 }

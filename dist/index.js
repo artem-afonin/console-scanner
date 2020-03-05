@@ -24,7 +24,7 @@ function prompt(promptText) {
 }
 exports.prompt = prompt;
 function next() {
-    if (inputQueue.length !== 0) {
+    if (hasNext()) {
         return inputQueue.splice(0, 1)[0];
     }
     var input = nextLine();
@@ -35,6 +35,10 @@ function next() {
     return strings[0];
 }
 exports.next = next;
+function hasNext() {
+    return inputQueue.length !== 0;
+}
+exports.hasNext = hasNext;
 function nextInt(radix) {
     if (radix === void 0) { radix = 10; }
     var num = parseInt(next(), radix);
@@ -56,6 +60,7 @@ exports["default"] = {
     nextLine: nextLine,
     prompt: prompt,
     next: next,
+    hasNext: hasNext,
     nextInt: nextInt,
     nextFloat: nextFloat
 };
