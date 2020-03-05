@@ -20,8 +20,8 @@
   "author": "Artem Afonin <artem.00.afonin@gmail.com>",
   "license": "MIT",
   "files": [
-    "dist/*.js",
-    "types/*.d.ts"
+    "dist",
+    "types"
   ],
   "typings": "types/index.d.ts",
   "dependencies": {
